@@ -77,11 +77,17 @@ img {
 				<a href="checkBalance.jsp">Check Balance</a>
 			</h3>
 			<h3>
-			<a href="changePassword.jsp">Change Password</a>
+				<a href="changePassword.jsp">Change Password</a>
+			</h3>
+			<h3>
+				<a href="displayProfile.jsp">Profile</a>
+			</h3>
+			<h3>
+				<a href="logout.jsp">Logout</a>
 			</h3>
 		</section>
 
-	
+
 
 	</header>
 </body>

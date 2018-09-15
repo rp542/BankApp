@@ -1,10 +1,10 @@
 package com.capgemini.bankapp.dao.impl;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import com.capgemini.bankapp.Database.Database;
 import com.capgemini.bankapp.dao.CustomerDao;
+
 import com.capgemini.bankapp.model.Customer;
 
 public class CustomerDaoImpl implements CustomerDao {
@@ -26,7 +26,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	@Override
 	public Customer updateProfile(Customer customer) {
-
+	
 		for (Customer c : customers) {
 			if (c.getCustomerEmail().equals(customer.getCustomerEmail())) {
 				if (c.getCustomerPassword().equals(customer.getCustomerPassword())) {
@@ -43,7 +43,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	@Override
 	public boolean updatePassword(Customer customer, String oldPassword, String newPassword) {
-
+		
 		for (Customer c : customers) {
 			if (c.getCustomerEmail().equals(customer.getCustomerEmail())) {
 				if (c.getCustomerPassword() == oldPassword) {
@@ -53,11 +53,5 @@ public class CustomerDaoImpl implements CustomerDao {
 			}
 		}
 		return false;
-	}
-
-	@Override
-	public HashSet<Customer> findAllCutomers() {
-
-		return null;
 	}
 }

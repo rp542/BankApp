@@ -7,9 +7,6 @@ public interface CustomerService {
 
 	public Customer updateProfile(Customer customer);
 
-	public default  boolean updatePassword(Customer customer, String oldPassword, String newPassword) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	public Customer updatePassword(Customer customer, String oldPassword, String newPassword);
 
 }

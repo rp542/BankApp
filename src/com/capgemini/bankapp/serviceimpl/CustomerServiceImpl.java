@@ -20,8 +20,8 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public boolean updatePassword(Customer customer, String oldPassword, String newPassword) {
-		return customerDao.updatePassword(customer, oldPassword, newPassword);
+	public Customer updatePassword(Customer customer, String oldPassword, String newPassword) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 }

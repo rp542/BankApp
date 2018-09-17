@@ -1,5 +1,6 @@
 package com.capgemini.bankapp.dao.impl;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import com.capgemini.bankapp.Database.Database;
@@ -9,12 +10,12 @@ import com.capgemini.bankapp.model.Customer;
 
 public class CustomerDaoImpl implements CustomerDao {
 
-	Set<Customer> customers = Database.getCustomer();
+	private HashSet<Customer> customers = (HashSet<Customer>) Database.getCustomer();
 
 	@Override
 	public Customer authenticate(Customer customer) {
 		for (Customer c : customers) {
-			if (c.getCustomerEmail().equals(customer.getCustomerEmail())) {
+			if (c.getCustomerId()==(customer.getCustomerId())) {
 				System.out.println(c);
 				if (c.getCustomerPassword().equals(customer.getCustomerPassword())) {
 					return c;
